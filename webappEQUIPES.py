@@ -42,11 +42,11 @@ df11D = dfD[selecao11D]
 selecao12D = dfD['equipe']=='Equipe 12'
 df12D = dfD[selecao12D]
 selecao13D = dfD['equipe']=='Equipe 13'
-df10D = dfD[selecao10D]
+df13D = dfD[selecao13D]
 selecao14D = dfD['equipe']=='Equipe 14'
-df11D = dfD[selecao11D]
+df14D = dfD[selecao14D]
 selecao15D = dfD['equipe']=='Equipe 15'
-df12D = dfD[selecao12D]
+df15D = dfD[selecao15D]
 
 # eliminar as colunas com valores ausentes
 summary = dfD.dropna(subset=['duvida'], axis=0)['duvida']
