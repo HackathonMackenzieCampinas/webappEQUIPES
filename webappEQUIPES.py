@@ -41,6 +41,12 @@ selecao11D = dfD['equipe']=='Equipe 11'
 df11D = dfD[selecao11D]
 selecao12D = dfD['equipe']=='Equipe 12'
 df12D = dfD[selecao12D]
+selecao13D = dfD['equipe']=='Equipe 13'
+df10D = dfD[selecao10D]
+selecao14D = dfD['equipe']=='Equipe 14'
+df11D = dfD[selecao11D]
+selecao15D = dfD['equipe']=='Equipe 15'
+df12D = dfD[selecao12D]
 
 # eliminar as colunas com valores ausentes
 summary = dfD.dropna(subset=['duvida'], axis=0)['duvida']
@@ -95,6 +101,12 @@ selecao11R = dfR['equipe']=='Equipe 11'
 df11R = dfR[selecao11R]
 selecao12R = dfR['equipe']=='Equipe 12'
 df12R = dfR[selecao12R]
+selecao13R = dfR['equipe']=='Equipe 13'
+df13R = dfR[selecao13R]
+selecao14R = dfR['equipe']=='Equipe 14'
+df14R = dfR[selecao14R]
+selecao15R = dfR['equipe']=='Equipe 15'
+df15R = dfR[selecao15R]
 
 #Cálculo do Número de Registros por EQUIPE
 NregDf01D = len(df01D)
@@ -119,7 +131,14 @@ NregDf10D = len(df10D)
 NregDf10R = len(df10R)
 NregDf11D = len(df11D)
 NregDf11R = len(df11R)
+NregDf12D = len(df12D)
 NregDf12R = len(df12R)
+NregDf13D = len(df13D)
+NregDf13R = len(df13R)
+NregDf14D = len(df14D)
+NregDf14R = len(df14R)
+NregDf15D = len(df15D)
+NregDf15R = len(df15R)
 
 image01 = Image.open('ImagemLateral.jpg')
 st.sidebar.image(image01, width=300, caption='Mack Week CCT 2022') 
@@ -146,7 +165,10 @@ menu = ["Dúvidas",
         "EQUIPE 09",
         "EQUIPE 10",
         "EQUIPE 11",
-        "EQUIPE 12"]
+        "EQUIPE 12",
+        "EQUIPE 13",
+        "EQUIPE 14",
+        "EQUIPE 15"]
 choice = st.sidebar.selectbox("Menu de Opções",menu)
 st.sidebar.info("Web app desenvolvido pelo professor Massaki de O. Igarashi para a gestão e acompanhamento do envio de dúvidas e respostas entre alunos, tutores, mentores e professores.")
 st.sidebar.info("2ª EDIÇÃO DO DESAFIO HACKATHON: MACKENZIE CAMPINAS - LOGITHINK.IT - IMA (Edição 2023)")
@@ -189,6 +211,15 @@ if choice == "Dúvidas":
     st.write('EQUIPE 12:')
     st.warning('Dúvida(s) Enviada(s)')
     st.code(df12D['duvida']) 
+    st.write('EQUIPE 13:')
+    st.warning('Dúvida(s) Enviada(s)')
+    st.code(df13D['duvida']) 
+    st.write('EQUIPE 14:')
+    st.warning('Dúvida(s) Enviada(s)')
+    st.code(df14D['duvida'])
+    st.write('EQUIPE 15:')
+    st.warning('Dúvida(s) Enviada(s)')
+    st.code(df15D['duvida'])  
     st.subheader("HISTÓRICO DE DÚVIDAS: ")
     st.code(dfD['equipe'] + ":" + dfD['duvida'])
     st.pyplot()
@@ -232,7 +263,15 @@ elif choice == "Respostas":
     st.write('EQUIPE 12:')      
     st.info('Resposta do(a) TUTOR(A):')
     st.code(df12R['resposta'])  
-               
+    st.write('EQUIPE 13:')    
+    st.info('Resposta do(a) TUTOR(A):')
+    st.code(df13R['resposta'])  
+    st.write('EQUIPE 14:')      
+    st.info('Resposta do(a) TUTOR(A):')
+    st.code(df14R['resposta'])  
+    st.write('EQUIPE 15:')      
+    st.info('Resposta do(a) TUTOR(A):')
+    st.code(df15R['resposta'])                 
 elif choice == "Dúvidas e Respostas":       
     st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
     colDR1, colDR2 = st.columns((1,1))
@@ -315,7 +354,26 @@ elif choice == "Dúvidas e Respostas":
     st.code(df12D['duvida']) 
     st.info('Resposta do(a) TUTOR(A):')
     st.code(df12R['resposta']) 
-
+    
+    #EQUIPE 13
+    st.subheader('EQUIPE 13:')
+    st.warning('Dúvida(s) Enviada(s)')
+    st.code(df13D['duvida']) 
+    st.info('Resposta do(a) TUTOR(A):')
+    st.code(df13R['resposta']) 
+    #EQUIPE 14
+    st.subheader('EQUIPE 14:')
+    st.warning('Dúvida(s) Enviada(s)')
+    st.code(df14D['duvida']) 
+    st.info('Resposta do(a) TUTOR(A):')
+    st.code(df14R['resposta']) 
+    #EQUIPE 15
+    st.subheader('EQUIPE 15:')
+    st.warning('Dúvida(s) Enviada(s)')
+    st.code(df15D['duvida']) 
+    st.info('Resposta do(a) TUTOR(A):')
+    st.code(df15R['resposta']) 
+  
 elif choice == "EQUIPE 01":       
     st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
     st.subheader('EQUIPE 01:')
@@ -495,4 +553,48 @@ elif choice == "EQUIPE 12":
     st.code(df12D['duvida']) 
     st.info('Resposta do(a) TUTOR(A):')
     st.code(df12R['resposta'])   
-        
+
+elif choice == "EQUIPE 13":       
+    st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
+    st.subheader('EQUIPE 13:')
+    colEQ111, colEQ112 = st.columns((1,1))
+    with colEQ111:
+        st.write("Nº TOTAL de Dúvidas:")
+        st.warning(NregDf13D)
+    with colEQ112:
+        st.write("Nº TOTAL de dúvidas RESPONDIDAS:")
+        st.info(NregDf13R)
+    st.warning('Dúvida(s) Enviada(s)')
+    st.code(df13D['duvida']) 
+    st.info('Resposta do(a) TUTOR(A):')
+    st.code(df13R['resposta'])  
+  
+elif choice == "EQUIPE 14":       
+    st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
+    st.subheader('EQUIPE 14:')
+    colEQ111, colEQ112 = st.columns((1,1))
+    with colEQ111:
+        st.write("Nº TOTAL de Dúvidas:")
+        st.warning(NregDf14D)
+    with colEQ112:
+        st.write("Nº TOTAL de dúvidas RESPONDIDAS:")
+        st.info(NregDf14R)
+    st.warning('Dúvida(s) Enviada(s)')
+    st.code(df14D['duvida']) 
+    st.info('Resposta do(a) TUTOR(A):')
+    st.code(df14R['resposta']) 
+
+elif choice == "EQUIPE 15":       
+    st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
+    st.subheader('EQUIPE 15:')
+    colEQ111, colEQ112 = st.columns((1,1))
+    with colEQ111:
+        st.write("Nº TOTAL de Dúvidas:")
+        st.warning(NregDf15D)
+    with colEQ112:
+        st.write("Nº TOTAL de dúvidas RESPONDIDAS:")
+        st.info(NregDf15R)
+    st.warning('Dúvida(s) Enviada(s)')
+    st.code(df15D['duvida']) 
+    st.info('Resposta do(a) TUTOR(A):')
+    st.code(df15R['resposta'])   
