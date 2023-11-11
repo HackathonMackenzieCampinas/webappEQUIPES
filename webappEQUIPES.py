@@ -294,49 +294,109 @@ elif choice == "Respostas":
     st.header("Painel Analítico: RESPOSTAS")    
     st.write('EQUIPE 01:')    
     st.info('Resposta do(a) TUTOR(A):')
-    st.write(df01R['resposta'])  
+    #st.write(df01R['resposta'])
+    nR = len(df01R['resposta'])
+    for j in range(nR):
+      with st.chat_message("user", avatar = "👨‍⚖️"):
+        st.write(df01R['resposta'][j])
     st.write('EQUIPE 02:')    
     st.info('Resposta do(a) TUTOR(A):')
-    st.write(df02R['resposta'])  
+    #st.write(df02R['resposta'])
+    nR = len(df02R['resposta'])
+    for j in range(nR):
+      with st.chat_message("user", avatar = "👨‍⚖️"):
+        st.write(df02R['resposta'][j])
     st.write('EQUIPE 03:')    
     st.info('Resposta do(a) TUTOR(A):')
-    st.write(df03R['resposta'])  
+    #st.write(df03R['resposta']) 
+    nR = len(df03R['resposta'])
+    for j in range(nR):
+      with st.chat_message("user", avatar = "👨‍⚖️"):
+        st.write(df03R['resposta'][j])
     st.write('EQUIPE 04:')    
     st.info('Resposta do(a) TUTOR(A):')
-    st.write(df04R['resposta'])      
+    #st.write(df04R['resposta'])
+    nR = len(df04R['resposta'])
+    for j in range(nR):
+      with st.chat_message("user", avatar = "👨‍⚖️"):
+        st.write(df04R['resposta'][j])
     st.write('EQUIPE 05:')    
     st.info('Resposta do(a) TUTOR(A):')
-    st.write(df05R['resposta'])  
+    #st.write(df05R['resposta'])  
+    nR = len(df05R['resposta'])
+    for j in range(nR):
+      with st.chat_message("user", avatar = "👨‍⚖️"):
+        st.write(df05R['resposta'][j])
     st.write('EQUIPE 06:')    
     st.info('Resposta do(a) TUTOR(A):')
-    st.write(df06R['resposta'])  
+    #st.write(df06R['resposta'])
+    nR = len(df06R['resposta'])
+    for j in range(nR):
+      with st.chat_message("user", avatar = "👨‍⚖️"):
+        st.write(df06R['resposta'][j])
     st.write('EQUIPE 07:')    
     st.info('Resposta do(a) TUTOR(A):')
-    st.write(df07R['resposta'])  
+    #st.write(df07R['resposta'])
+    nR = len(df07R['resposta'])
+    for j in range(nR):
+      with st.chat_message("user", avatar = "👨‍⚖️"):
+        st.write(df07R['resposta'][j])
     st.write('EQUIPE 08:')    
     st.info('Resposta do(a) TUTOR(A):')
-    st.write(df08R['resposta'])  
+    #st.write(df08R['resposta'])  
+    nR = len(df08R['resposta'])
+    for j in range(nR):
+      with st.chat_message("user", avatar = "👨‍⚖️"):
+        st.write(df08R['resposta'][j])
     st.write('EQUIPE 09:')    
     st.info('Resposta do(a) TUTOR(A):')
-    st.write(df09R['resposta'])  
+    #st.write(df09R['resposta']) 
+    nR = len(df09R['resposta'])
+    for j in range(nR):
+      with st.chat_message("user", avatar = "👨‍⚖️"):
+        st.write(df09R['resposta'][j])
     st.write('EQUIPE 10:')    
     st.info('Resposta do(a) TUTOR(A):')
-    st.write(df10R['resposta'])  
+    #st.write(df10R['resposta']) 
+    nR = len(df10R['resposta'])
+    for j in range(nR):
+      with st.chat_message("user", avatar = "👨‍⚖️"):
+        st.write(df10R['resposta'][j])
     st.write('EQUIPE 11:')      
     st.info('Resposta do(a) TUTOR(A):')
-    st.write(df11R['resposta'])  
+    #st.write(df11R['resposta']) 
+    nR = len(df11R['resposta'])
+    for j in range(nR):
+      with st.chat_message("user", avatar = "👨‍⚖️"):
+        st.write(df11R['resposta'][j])
     st.write('EQUIPE 12:')      
     st.info('Resposta do(a) TUTOR(A):')
-    st.write(df12R['resposta'])  
+    #st.write(df12R['resposta'])  
+    nR = len(df12R['resposta'])
+    for j in range(nR):
+      with st.chat_message("user", avatar = "👨‍⚖️"):
+        st.write(df12R['resposta'][j])
     st.write('EQUIPE 13:')    
     st.info('Resposta do(a) TUTOR(A):')
-    st.write(df13R['resposta'])  
+    #st.write(df13R['resposta'])  
+    nR = len(df13R['resposta'])
+    for j in range(nR):
+      with st.chat_message("user", avatar = "👨‍⚖️"):
+        st.write(df13R['resposta'][j])
     st.write('EQUIPE 14:')      
     st.info('Resposta do(a) TUTOR(A):')
-    st.write(df14R['resposta'])  
+    #st.write(df14R['resposta'])  
+    nR = len(df14R['resposta'])
+    for j in range(nR):
+      with st.chat_message("user", avatar = "👨‍⚖️"):
+        st.write(df14R['resposta'][j])
     st.write('EQUIPE 15:')      
     st.info('Resposta do(a) TUTOR(A):')
-    st.write(df15R['resposta'])                 
+    #st.write(df15R['resposta'])
+    nR = len(df15R['resposta'])
+    for j in range(nR):
+      with st.chat_message("user", avatar = "👨‍⚖️"):
+        st.write(df15R['resposta'][j])
 elif choice == "Dúvidas e Respostas":       
     st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
     colDR1, colDR2 = st.columns((1,1))
