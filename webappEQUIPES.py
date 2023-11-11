@@ -409,14 +409,14 @@ elif choice == "Dúvidas e Respostas":
     st.sidebar.info("Índicador de Eficiência = " + str(100*NregR/NregD)+"%")
     #EQUIPE 01
     st.subheader('EQUIPE 01:')
-    colD, colR = st.columns((1,1))
-    with colD:
+    colD1, colR1 = st.columns((1,1))
+    with colD1:
       st.warning('Dúvida(s) Enviada(s)')
       nD = len(df01D['duvida'])
       for i in range(nD):
         with st.chat_message("user"):   
           st.write(df01D['duvida'][i]) 
-    with colR:        
+    with colR1:        
       st.success('Resposta do(a) TUTOR(A):')
       nR = len(df01R['resposta'])
       for j in range(nR):
@@ -424,89 +424,215 @@ elif choice == "Dúvidas e Respostas":
           st.write(df01R['resposta'][j])
     #EQUIPE 02
     st.subheader('EQUIPE 02:')
-    st.warning('Dúvida(s) Enviada(s)')
-    #st.write(df02D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    #st.write(df02R['resposta'])     
+    colD2, colR2 = st.columns((1,1))
+    with colD2:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df02D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df02D['duvida'][i]) 
+    with colR2:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df02R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df02R['resposta'][j])
     #EQUIPE 03
     st.subheader('EQUIPE 03:')
-    st.warning('Dúvida(s) Enviada(s)')
-    #st.write(df03D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    #st.write(df03R['resposta']) 
+    colD3, colR3 = st.columns((1,1))
+    with colD3:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df03D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df03D['duvida'][i]) 
+    with colR3:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df03R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df03R['resposta'][j])
     #EQUIPE 04
     st.subheader('EQUIPE 04:')
-    st.warning('Dúvida(s) Enviada(s)')
-    #st.write(df04D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    #st.write(df04R['resposta']) 
+    colD4, colR4 = st.columns((1,1))
+    with colD4:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df04D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df04D['duvida'][i]) 
+    with colR4:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df04R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df04R['resposta'][j])
     #EQUIPE 05
     st.subheader('EQUIPE 05:')
-    st.warning('Dúvida(s) Enviada(s)')
-    #st.write(df05D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    #st.write(df05R['resposta'])    
+    colD5, colR5 = st.columns((1,1))
+    with colD5:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df05D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df05D['duvida'][i]) 
+    with colR5:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df05R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df05R['resposta'][j])
     #EQUIPE 06
     st.subheader('EQUIPE 06:')
-    st.warning('Dúvida(s) Enviada(s)')
-    #st.write(df06D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    #st.write(df06R['resposta'])  
+    colD6, colR6 = st.columns((1,1))
+    with colD6:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df06D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df06D['duvida'][i]) 
+    with colR6:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df06R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df06R['resposta'][j])
     #EQUIPE 07
     st.subheader('EQUIPE 07:')
-    st.warning('Dúvida(s) Enviada(s)')
-    #st.write(df07D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    #st.write(df07R['resposta'])     
+    colD7, colR7 = st.columns((1,1))
+    with colD7:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df07D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df07D['duvida'][i]) 
+    with colR7:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df07R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df07R['resposta'][j])    
     #EQUIPE 08
     st.subheader('EQUIPE 08:')
-    st.warning('Dúvida(s) Enviada(s)')
-    #st.write(df08D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    #st.write(df08R['resposta']) 
+    colD8, colR8 = st.columns((1,1))
+    with colD8:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df08D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df08D['duvida'][i]) 
+    with colR8:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df08R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df08R['resposta'][j])
     #EQUIPE 09
     st.subheader('EQUIPE 09:')
-    st.warning('Dúvida(s) Enviada(s)')
-    #st.write(df09D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    #st.write(df09R['resposta']) 
+    colD9, colR9 = st.columns((1,1))
+    with colD9:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df09D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df09D['duvida'][i]) 
+    with colR9:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df09R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df09R['resposta'][j])
     #EQUIPE 10
     st.subheader('EQUIPE 10:')
-    st.warning('Dúvida(s) Enviada(s)')
-    #st.write(df10D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    #st.write(df10R['resposta']) 
+    colD10, colR10 = st.columns((1,1))
+    with colD10:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df010D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df010D['duvida'][i]) 
+    with colR10:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df010R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df010R['resposta'][j])
     #EQUIPE 11
     st.subheader('EQUIPE 11:')
-    st.warning('Dúvida(s) Enviada(s)')
-    #st.write(df11D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    #st.write(df11R['resposta']) 
+    colD11, colR11 = st.columns((1,1))
+    with colD11:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df11D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df11D['duvida'][i]) 
+    with colR11:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df11R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df11R['resposta'][j])
     #EQUIPE 12
     st.subheader('EQUIPE 12:')
-    st.warning('Dúvida(s) Enviada(s)')
-    #st.write(df12D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    #st.write(df12R['resposta']) 
+    colD12, colR12 = st.columns((1,1))
+    with colD12:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df12D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df12D['duvida'][i]) 
+    with colR12:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df12R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df12R['resposta'][j])
     
     #EQUIPE 13
     st.subheader('EQUIPE 13:')
-    st.warning('Dúvida(s) Enviada(s)')
-    #st.write(df13D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    #st.write(df13R['resposta']) 
+    colD13, colR13 = st.columns((1,1))
+    with colD13:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df13D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df13D['duvida'][i]) 
+    with colR13:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df13R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df13R['resposta'][j])
     #EQUIPE 14
     st.subheader('EQUIPE 14:')
-    st.warning('Dúvida(s) Enviada(s)')
-    #st.write(df14D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    #st.write(df14R['resposta']) 
+    colD14, colR14 = st.columns((1,1))
+    with colD14:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df14D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df14D['duvida'][i]) 
+    with colR14:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df14R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df14R['resposta'][j])
     #EQUIPE 15
     st.subheader('EQUIPE 15:')
-    st.warning('Dúvida(s) Enviada(s)')
-    #st.write(df15D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    #st.write(df15R['resposta']) 
+    colD15, colR15 = st.columns((1,1))
+    with colD15:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df15D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df15D['duvida'][i]) 
+    with colR15:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df15R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df15R['resposta'][j])
   
 elif choice == "EQUIPE 01":       
     st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
