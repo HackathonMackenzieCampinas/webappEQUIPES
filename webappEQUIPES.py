@@ -179,107 +179,107 @@ if choice == "Dúvidas":
     st.warning('Dúvida(s) Enviada(s)')
     #st.write(df01D['duvida']) 
     nD = len(df01D['duvida'])
-      for i in range(nD):
-        with st.chat_message("user"):   
-          st.write(df01D['duvida'][i]) 
+    for i in range(nD):
+      with st.chat_message("user"):   
+        st.write(df01D['duvida'][i]) 
     st.write('EQUIPE 02:')
     st.warning('Dúvida(s) Enviada(s)')
     #st.write(df02D['duvida']) 
     nD = len(df02D['duvida'])
-      for i in range(nD):
-        with st.chat_message("user"):   
-          st.write(df02D['duvida'][i]) 
+    for i in range(nD):
+      with st.chat_message("user"):   
+        st.write(df02D['duvida'][i]) 
     st.write('EQUIPE 03:')
     st.warning('Dúvida(s) Enviada(s)')
     #st.write(df03D['duvida'])
     nD = len(df03D['duvida'])
-      for i in range(nD):
-        with st.chat_message("user"):   
-          st.write(df03D['duvida'][i]) 
+    for i in range(nD):
+      with st.chat_message("user"):   
+        st.write(df03D['duvida'][i]) 
     st.write('EQUIPE 04:')
     st.warning('Dúvida(s) Enviada(s)')
     #st.write(df04D['duvida']) 
     nD = len(df04D['duvida'])
-      for i in range(nD):
-        with st.chat_message("user"):   
-          st.write(df04D['duvida'][i]) 
+    for i in range(nD):
+      with st.chat_message("user"):   
+        st.write(df04D['duvida'][i]) 
     st.write('EQUIPE 05:')
     st.warning('Dúvida(s) Enviada(s)')
     #st.write(df05D['duvida']) 
     nD = len(df05D['duvida'])
-      for i in range(nD):
-        with st.chat_message("user"):   
-          st.write(df05D['duvida'][i]) 
+    for i in range(nD):
+      with st.chat_message("user"):   
+        st.write(df05D['duvida'][i]) 
     st.write('EQUIPE 06:')
     st.warning('Dúvida(s) Enviada(s)')
     #st.write(df06D['duvida'])
     nD = len(df06D['duvida'])
-      for i in range(nD):
-        with st.chat_message("user"):   
-          st.write(df06D['duvida'][i]) 
+    for i in range(nD):
+      with st.chat_message("user"):   
+        st.write(df06D['duvida'][i]) 
     st.write('EQUIPE 07:')
     st.warning('Dúvida(s) Enviada(s)')
     #st.write(df07D['duvida']) 
     nD = len(df07D['duvida'])
-      for i in range(nD):
-        with st.chat_message("user"):   
-          st.write(df07D['duvida'][i]) 
+    for i in range(nD):
+      with st.chat_message("user"):   
+        st.write(df07D['duvida'][i]) 
     st.write('EQUIPE 08:')
     st.warning('Dúvida(s) Enviada(s)')
     #st.write(df08D['duvida']) 
     nD = len(df08D['duvida'])
-      for i in range(nD):
-        with st.chat_message("user"):   
-          st.write(df08D['duvida'][i]) 
+    for i in range(nD):
+      with st.chat_message("user"):   
+        st.write(df08D['duvida'][i]) 
     st.write('EQUIPE 09:')
     st.warning('Dúvida(s) Enviada(s)')
     #st.write(df09D['duvida']) 
     nD = len(df09D['duvida'])
-      for i in range(nD):
-        with st.chat_message("user"):   
-          st.write(df09D['duvida'][i]) 
+    for i in range(nD):
+      with st.chat_message("user"):   
+        st.write(df09D['duvida'][i]) 
     st.write('EQUIPE 10:')
     st.warning('Dúvida(s) Enviada(s)')
     #st.write(df10D['duvida']) 
     nD = len(df10D['duvida'])
-      for i in range(nD):
-        with st.chat_message("user"):   
-          st.write(df10D['duvida'][i]) 
+    for i in range(nD):
+      with st.chat_message("user"):   
+        st.write(df10D['duvida'][i]) 
     st.write('EQUIPE 11:')
     st.warning('Dúvida(s) Enviada(s)')
     #st.write(df11D['duvida']) 
     nD = len(df11D['duvida'])
-      for i in range(nD):
-        with st.chat_message("user"):   
-          st.write(df11D['duvida'][i]) 
+    for i in range(nD):
+      with st.chat_message("user"):   
+        st.write(df11D['duvida'][i]) 
     st.write('EQUIPE 12:')
     st.warning('Dúvida(s) Enviada(s)')
     #st.write(df12D['duvida']) 
     nD = len(df12D['duvida'])
-      for i in range(nD):
-        with st.chat_message("user"):   
-          st.write(df12D['duvida'][i]) 
+    for i in range(nD):
+      with st.chat_message("user"):   
+        st.write(df12D['duvida'][i]) 
     st.write('EQUIPE 13:')
     st.warning('Dúvida(s) Enviada(s)')
     #st.write(df13D['duvida']) 
     nD = len(df13D['duvida'])
-      for i in range(nD):
-        with st.chat_message("user"):   
-          st.write(df13D['duvida'][i]) 
+    for i in range(nD):
+      with st.chat_message("user"):   
+        st.write(df13D['duvida'][i]) 
     st.write('EQUIPE 14:')
     st.warning('Dúvida(s) Enviada(s)')
     #st.write(df14D['duvida'])
     nD = len(df14D['duvida'])
-      for i in range(nD):
-        with st.chat_message("user"):   
-          st.write(df14D['duvida'][i]) 
+    for i in range(nD):
+      with st.chat_message("user"):   
+        st.write(df14D['duvida'][i]) 
     st.write('EQUIPE 15:')
     st.warning('Dúvida(s) Enviada(s)')
     #st.write(df15D['duvida'])
     nD = len(df15D['duvida'])
-      for i in range(nD):
-        with st.chat_message("user"):   
-          st.write(df15D['duvida'][i]) 
+    for i in range(nD):
+      with st.chat_message("user"):   
+        st.write(df15D['duvida'][i]) 
     st.subheader("HISTÓRICO DE DÚVIDAS: ")
     
     #st.write(dfD['equipe'] + ":" + dfD['duvida'])
