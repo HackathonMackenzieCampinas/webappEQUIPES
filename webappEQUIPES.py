@@ -637,224 +637,240 @@ elif choice == "Dúvidas e Respostas":
 elif choice == "EQUIPE 01":       
     st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
     st.subheader('EQUIPE 01:')
-    colEQ11, colEQ12 = st.columns((1,1))
-    with colEQ11:
-        st.write("Nº TOTAL de Dúvidas:")
-        st.warning(NregDf01D)
-    with colEQ12:
-        st.write("Nº TOTAL de dúvidas RESPONDIDAS:")
-        st.info(NregDf01R)
-    st.warning('Dúvida(s) Enviada(s)')
-    st.write(df01D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    st.write(df01R['resposta'])   
-        
+    colEQ01D, colEQ01R = st.columns((1,1))
+    with colEQ01D:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df01D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df01D['duvida'][i]) 
+    with colEQ01R:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df01R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df01R['resposta'][j])        
 elif choice == "EQUIPE 02":       
     st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
     st.subheader('EQUIPE 02:')
-    colEQ21, colEQ22 = st.columns((1,1))
-    with colEQ21:
-        st.write("Nº TOTAL de Dúvidas:")
-        st.warning(NregDf02D)
-    with colEQ22:
-        st.write("Nº TOTAL de dúvidas RESPONDIDAS:")
-        st.info(NregDf02R)
-    st.warning('Dúvida(s) Enviada(s)')
-    st.write(df02D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    st.write(df02R['resposta'])    
-        
+    colEQ02D, colEQ02R = st.columns((1,1))
+    with colEQ02D:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df02D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df02D['duvida'][i]) 
+    with colEQ02R:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df02R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df02R['resposta'][j])         
 elif choice == "EQUIPE 03":       
     st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
     st.subheader('EQUIPE 03:')
-    colEQ31, colEQ32 = st.columns((1,1))
-    with colEQ31:
-        st.write("Nº TOTAL de Dúvidas:")
-        st.warning(NregDf03D)
-    with colEQ32:
-        st.write("Nº TOTAL de dúvidas RESPONDIDAS:")
-        st.info(NregDf03R)
-    st.warning('Dúvida(s) Enviada(s)')
-    st.write(df03D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    st.write(df03R['resposta'])  
-        
+    colEQ03D, colEQ03R = st.columns((1,1))
+    with colEQ03D:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df03D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df03D['duvida'][i]) 
+    with colEQ03R:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df03R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df03R['resposta'][j])  
 elif choice == "EQUIPE 04":       
     st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
     st.subheader('EQUIPE 04:')
-    colEQ41, colEQ42 = st.columns((1,1))
-    with colEQ41:
-        st.write("Nº TOTAL de Dúvidas:")
-        st.warning(NregDf04D)
-    with colEQ42:
-        st.write("Nº TOTAL de dúvidas RESPONDIDAS:")
-        st.info(NregDf04R)
-    st.warning('Dúvida(s) Enviada(s)')
-    st.write(df04D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    st.write(df04R['resposta'])  
-        
+    colEQ04D, colEQ04R = st.columns((1,1))
+    with colEQ04D:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df04D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df04D['duvida'][i]) 
+    with colEQ04R:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df04R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df04R['resposta'][j])  
 elif choice == "EQUIPE 05":       
     st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
     st.subheader('EQUIPE 05:')
-    colEQ51, colEQ52 = st.columns((1,1))
-    with colEQ51:
-        st.write("Nº TOTAL de Dúvidas:")
-        st.warning(NregDf05D)
-    with colEQ52:
-        st.write("Nº TOTAL de dúvidas RESPONDIDAS:")
-        st.info(NregDf05R)
-    st.warning('Dúvida(s) Enviada(s)')
-    st.write(df05D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    st.write(df05R['resposta'])        
-
+    colEQ05D, colEQ05R = st.columns((1,1))
+    with colEQ05D:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df05D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df05D['duvida'][i]) 
+    with colEQ05R:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df05R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df05R['resposta'][j])  
 elif choice == "EQUIPE 06":       
     st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
     st.subheader('EQUIPE 06:')
-    colEQ61, colEQ62 = st.columns((1,1))
-    with colEQ61:
-        st.write("Nº TOTAL de Dúvidas:")
-        st.warning(NregDf06D)
-    with colEQ62:
-        st.write("Nº TOTAL de dúvidas RESPONDIDAS:")
-        st.info(NregDf06R)
-    st.warning('Dúvida(s) Enviada(s)')
-    st.write(df06D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    st.write(df06R['resposta'])   
-        
+    colEQ06D, colEQ06R = st.columns((1,1))
+    with colEQ06D:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df06D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df06D['duvida'][i]) 
+    with colEQ06R:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df06R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df06R['resposta'][j])  
 elif choice == "EQUIPE 07":       
     st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
     st.subheader('EQUIPE 07:')
-    colEQ71, colEQ72 = st.columns((1,1))
-    with colEQ71:
-        st.write("Nº TOTAL de Dúvidas:")
-        st.warning(NregDf07D)
-    with colEQ72:
-        st.write("Nº TOTAL de dúvidas RESPONDIDAS:")
-        st.info(NregDf07R)
-    st.warning('Dúvida(s) Enviada(s)')
-    st.write(df07D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    st.write(df07R['resposta'])    
-        
+    colEQ07D, colEQ07R = st.columns((1,1))
+    with colEQ07D:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df07D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df07D['duvida'][i]) 
+    with colEQ07R:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df07R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df07R['resposta'][j])  
 elif choice == "EQUIPE 08":       
     st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
     st.subheader('EQUIPE 08:')
-    colEQ81, colEQ82 = st.columns((1,1))
-    with colEQ81:
-        st.write("Nº TOTAL de Dúvidas:")
-        st.warning(NregDf08D)
-    with colEQ82:
-        st.write("Nº TOTAL de dúvidas RESPONDIDAS:")
-        st.info(NregDf08R)
-    st.warning('Dúvida(s) Enviada(s)')
-    st.write(df08D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    st.write(df08R['resposta'])  
-        
+    colEQ08D, colEQ08R = st.columns((1,1))
+    with colEQ08D:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df08D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df08D['duvida'][i]) 
+    with colEQ08R:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df08R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df08R['resposta'][j])  
 elif choice == "EQUIPE 09":       
     st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
     st.subheader('EQUIPE 09:')
-    colEQ91, colEQ92 = st.columns((1,1))
-    with colEQ91:
-        st.write("Nº TOTAL de Dúvidas:")
-        st.warning(NregDf09D)
-    with colEQ92:
-        st.write("Nº TOTAL de dúvidas RESPONDIDAS:")
-        st.info(NregDf09R)
-    st.warning('Dúvida(s) Enviada(s)')
-    st.write(df09D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    st.write(df09R['resposta'])  
-        
+    colEQ09D, colEQ09R = st.columns((1,1))
+    with colEQ09D:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df09D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df09D['duvida'][i]) 
+    with colEQ09R:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df09R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df09R['resposta'][j])  
 elif choice == "EQUIPE 10":       
     st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
     st.subheader('EQUIPE 10:')
-    colEQ101, colEQ102 = st.columns((1,1))
-    with colEQ101:
-        st.write("Nº TOTAL de Dúvidas:")
-        st.warning(NregDf10D)
-    with colEQ102:
-        st.write("Nº TOTAL de dúvidas RESPONDIDAS:")
-        st.info(NregDf10R)
-    st.warning('Dúvida(s) Enviada(s)')
-    st.write(df10D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    st.write(df10R['resposta']) 
-        
+    colEQ10D, colEQ10R = st.columns((1,1))
+    with colEQ10D:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df10D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df10D['duvida'][i]) 
+    with colEQ10R:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df10R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df10R['resposta'][j])  
 elif choice == "EQUIPE 11":       
     st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
     st.subheader('EQUIPE 11:')
-    colEQ111, colEQ112 = st.columns((1,1))
-    with colEQ111:
-        st.write("Nº TOTAL de Dúvidas:")
-        st.warning(NregDf11D)
-    with colEQ112:
-        st.write("Nº TOTAL de dúvidas RESPONDIDAS:")
-        st.info(NregDf11R)
-    st.warning('Dúvida(s) Enviada(s)')
-    st.write(df11D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    st.write(df11R['resposta']) 
-    
+    colEQ11D, colEQ11R = st.columns((1,1))
+    with colEQ11D:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df11D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df11D['duvida'][i]) 
+    with colEQ11R:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df11R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df11R['resposta'][j])     
 elif choice == "EQUIPE 12":       
     st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
     st.subheader('EQUIPE 12:')
-    colEQ111, colEQ112 = st.columns((1,1))
-    with colEQ111:
-        st.write("Nº TOTAL de Dúvidas:")
-        st.warning(NregDf11D)
-    with colEQ112:
-        st.write("Nº TOTAL de dúvidas RESPONDIDAS:")
-        st.info(NregDf11R)
-    st.warning('Dúvida(s) Enviada(s)')
-    st.write(df12D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    st.write(df12R['resposta'])   
-
+    colEQ12D, colEQ12R = st.columns((1,1))
+    with colEQ12D:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df12D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df12D['duvida'][i]) 
+    with colEQ12R:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df12R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df12R['resposta'][j]) 
 elif choice == "EQUIPE 13":       
     st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
     st.subheader('EQUIPE 13:')
-    colEQ111, colEQ112 = st.columns((1,1))
-    with colEQ111:
-        st.write("Nº TOTAL de Dúvidas:")
-        st.warning(NregDf13D)
-    with colEQ112:
-        st.write("Nº TOTAL de dúvidas RESPONDIDAS:")
-        st.info(NregDf13R)
-    st.warning('Dúvida(s) Enviada(s)')
-    st.write(df13D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    st.write(df13R['resposta'])  
-  
+    colEQ13D, colEQ13R = st.columns((1,1))
+    with colEQ13D:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df13D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df13D['duvida'][i]) 
+    with colEQ13R:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df13R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df13R['resposta'][j]) 
 elif choice == "EQUIPE 14":       
     st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
     st.subheader('EQUIPE 14:')
-    colEQ111, colEQ112 = st.columns((1,1))
-    with colEQ111:
-        st.write("Nº TOTAL de Dúvidas:")
-        st.warning(NregDf14D)
-    with colEQ112:
-        st.write("Nº TOTAL de dúvidas RESPONDIDAS:")
-        st.info(NregDf14R)
-    st.warning('Dúvida(s) Enviada(s)')
-    st.write(df14D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    st.write(df14R['resposta']) 
-
+    colEQ14D, colEQ14R = st.columns((1,1))
+    with colEQ14D:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df14D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df14D['duvida'][i]) 
+    with colEQ14R:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df14R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df14R['resposta'][j]) 
 elif choice == "EQUIPE 15":       
     st.header("Painel Analítico: DÚVIDAS E RESPOSTAS")  
     st.subheader('EQUIPE 15:')
-    colEQ111, colEQ112 = st.columns((1,1))
-    with colEQ111:
-        st.write("Nº TOTAL de Dúvidas:")
-        st.warning(NregDf15D)
-    with colEQ112:
-        st.write("Nº TOTAL de dúvidas RESPONDIDAS:")
-        st.info(NregDf15R)
-    st.warning('Dúvida(s) Enviada(s)')
-    st.write(df15D['duvida']) 
-    st.info('Resposta do(a) TUTOR(A):')
-    st.write(df15R['resposta'])   
+    colEQ15D, colEQ15R = st.columns((1,1))
+    with colEQ15D:
+      st.warning('Dúvida(s) Enviada(s)')
+      nD = len(df15D['duvida'])
+      for i in range(nD):
+        with st.chat_message("user"):   
+          st.write(df15D['duvida'][i]) 
+    with colEQ15R:        
+      st.success('Resposta do(a) TUTOR(A):')
+      nR = len(df15R['resposta'])
+      for j in range(nR):
+        with st.chat_message("user", avatar = "👨‍⚖️"):
+          st.write(df15R['resposta'][j]) 
