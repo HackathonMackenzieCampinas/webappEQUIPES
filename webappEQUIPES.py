@@ -553,7 +553,7 @@ elif choice == "Dúvidas e Respostas":
           st.write(df10D['duvida'][i]) 
     with colR10:        
       st.success('Resposta do(a) TUTOR(A):')
-      nR = len(df010R['resposta'])
+      nR = len(df10R['resposta'])
       for j in range(nR):
         with st.chat_message("user", avatar = "👨‍⚖️"):
           st.write(df10R['resposta'][j])
