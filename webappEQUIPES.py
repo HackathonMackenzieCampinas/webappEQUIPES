@@ -54,7 +54,7 @@ summary = dfD.dropna(subset=['duvida'], axis=0)['duvida']
 all_summary = " ".join(s for s in summary)
 # lista de stopword
 stopwords = set(STOPWORDS)
-stopwords.update(["Qual", "qual", "de", "ao", "o", "nao", "para", "da", "meu", "em", "você", "ter", "um", "uma", "ou", "os", "ser", "só"])
+stopwords.update(["Qual", "qual", "que", "Que", "de", "ao", "o", "nao", "para", "da", "meu", "em", "você", "ter", "um", "uma", "ou", "os", "ser", "só"])
 # gerar uma wordcloud
 wordcloud = WordCloud(stopwords=stopwords,
                       background_color="white",
