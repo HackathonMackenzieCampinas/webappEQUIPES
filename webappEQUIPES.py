@@ -547,16 +547,16 @@ elif choice == "Dúvidas e Respostas":
     colD10, colR10 = st.columns((1,1))
     with colD10:
       st.warning('Dúvida(s) Enviada(s)')
-      nD = len(df010D['duvida'])
+      nD = len(df10D['duvida'])
       for i in range(nD):
         with st.chat_message("user"):   
-          st.write(df010D['duvida'][i]) 
+          st.write(df10D['duvida'][i]) 
     with colR10:        
       st.success('Resposta do(a) TUTOR(A):')
       nR = len(df010R['resposta'])
       for j in range(nR):
         with st.chat_message("user", avatar = "👨‍⚖️"):
-          st.write(df010R['resposta'][j])
+          st.write(df10R['resposta'][j])
     #EQUIPE 11
     st.subheader('EQUIPE 11:')
     colD11, colR11 = st.columns((1,1))
