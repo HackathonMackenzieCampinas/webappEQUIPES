@@ -902,5 +902,6 @@ elif choice == "Pontos Equipes":
     mvp =  float(dfresumo['MVP'][i])/qtdDadosPorEquipe[i]
     inov = float(dfresumo['Inovacao'][i])/qtdDadosPorEquipe[i]
     nota = pa + cr + co + ap + mvp + inov
-    st.info("Média Total da " + str(rotulo[i]) + " = " + str(nota))
+    st.write("Média Total da " + str(rotulo[i]))
+    st.info(nota)
     st.write('')
