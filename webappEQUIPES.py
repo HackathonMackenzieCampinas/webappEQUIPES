@@ -27,7 +27,7 @@ rotulo = resumo.index
 nEquipes = len(rotulo)
 qtdDadosPorEquipe = []
 for count in range(nEquipes):
-  selecao01P = dfD['Equipe']==rotulo[count]
+  selecao01P = dfP['Equipe']==rotulo[count]
   df01P = dfP[selecao01P]
   qtdDadosPorEquipe.append(len(df01P))
   del(df01P)
