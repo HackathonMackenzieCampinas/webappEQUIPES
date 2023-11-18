@@ -30,6 +30,8 @@ for count in range(nEquipes):
   selecao01P = dfD['Equipe']==rotulo[count]
   df01P = dfP[selecao01P]
   qtdDadosPorEquipe.append(len(df01P))
+  del(df01P)
+
 resumo = dfP.groupby(["Equipe"]).sum()
 dfresumo = pd.DataFrame(resumo)
 n=len(rotulo)
