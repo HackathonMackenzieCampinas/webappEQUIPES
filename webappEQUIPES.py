@@ -894,6 +894,7 @@ elif choice == "EQUIPE 15":
         with st.chat_message("user", avatar = "👨‍⚖️"):
           st.write(df15R['resposta'][j]) 
 elif choice == "Pontos Equipes":
+  vetNOTAS = []
   for i in range(n):
     pa = float(dfresumo['Participacao'][i])/qtdDadosPorEquipe[i]
     cr = float(dfresumo['Criatividade'][i])/qtdDadosPorEquipe[i]
@@ -902,6 +903,11 @@ elif choice == "Pontos Equipes":
     mvp =  float(dfresumo['MVP'][i])/qtdDadosPorEquipe[i]
     inov = float(dfresumo['Inovacao'][i])/qtdDadosPorEquipe[i]
     nota = pa + cr + co + ap + mvp + inov
+    vetNOTAS.append(nota)
     st.write("Média Total da " + str(rotulo[i]))
     st.info(nota)
     st.write('')
+  DF = pd.DataFrame(vetNOTAS)
+  DF.columns = ['Notas']
+  DF.index = rotulo
+  st.dataframe(DF.sort_values(by='Notas', ascending=False))
