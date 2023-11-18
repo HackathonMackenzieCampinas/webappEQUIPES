@@ -16,7 +16,24 @@ dataD = rD.content
 dfD = pd.read_csv(BytesIO(dataD), index_col=0)
 NregD = len(dfD)
 dfD.columns = ['equipe', 'nome', 'duvida', 'obs']
-
+#============================================================================================
+#IMPORTAÇÃO DOS DADOS DA PLANILHA Pontuação das Equipes II Hackathon Mackenzie-Logithink-IMA (hackathon.cct.2023@gmail.com)
+rP = requests.get('https://docs.google.com/spreadsheets/d/e/2PACX-1vQj4zhEz_COCvFMKnizUaRZz87rl8tOVv3b-U7q9fQFMauMRbT7vJDIlI8HPSLAdoCsthRh6yEigLsX/pub?gid=87278842&single=true&output=csv')
+dataP = rP.content
+dfP = pd.read_csv(BytesIO(dataP))
+dfP.columns = ['D/H', 'Participacao', 'Criatividade', 'Coerencia', 'Apresentacao', 'MVP', 'Inovacao', 'OBS', 'Equipe']
+resumo = dfP.groupby(["Equipe"]).sum()
+rotulo = resumo.index
+nEquipes = len(rotulo)
+qtdDadosPorEquipe = []
+for count in range(nEquipes):
+  selecao01D = dfD['Equipe']==rotulo[count]
+  df01D = dfP[selecao01D]
+  qtdDadosPorEquipe.append(len(df01D))
+resumo = dfP.groupby(["Equipe"]).sum()
+dfresumo = pd.DataFrame(resumo)
+n=len(rotulo)
+#============================================================================================
 selecao01D = dfD['equipe']=='Equipe 01'
 df01D = dfD[selecao01D]
 selecao02D = dfD['equipe']=='Equipe 02'
@@ -154,6 +171,7 @@ st.markdown(mystyle1, unsafe_allow_html=True)
 menu = ["Dúvidas",
         "Respostas",
         "Dúvidas e Respostas",
+        "Pontuação Equipes",
         "EQUIPE 01",
         "EQUIPE 02",
         "EQUIPE 03", 
@@ -172,7 +190,6 @@ menu = ["Dúvidas",
 choice = st.sidebar.selectbox("Menu de Opções",menu)
 st.sidebar.info("Web app desenvolvido pelo professor Massaki de O. Igarashi para a gestão e acompanhamento do envio de dúvidas e respostas entre alunos, tutores, mentores e professores.")
 st.sidebar.info("2ª EDIÇÃO DO DESAFIO HACKATHON: MACKENZIE CAMPINAS - LOGITHINK.IT - IMA (Edição 2023)")
-
 if choice == "Dúvidas": 
     st.header("Painel Analítico: DÚVIDAS")   
     st.write('EQUIPE 01:')
@@ -874,3 +891,13 @@ elif choice == "EQUIPE 15":
       for j in range(nR):
         with st.chat_message("user", avatar = "👨‍⚖️"):
           st.write(df15R['resposta'][j]) 
+elif choice = "Pontuação Equipes":
+  for i in range(n):
+    pa = float(dfresumo['Participacao'][i])/qtdDadosPorEquipe[i]
+    cr = float(dfresumo['Criatividade'][i])/qtdDadosPorEquipe[i]
+    co = float(dfresumo['Coerencia'][i])/qtdDadosPorEquipe[i]
+    ap = float(dfresumo['Apresentacao'][i])/qtdDadosPorEquipe[i]
+    mvp =  float(dfresumo['MVP'][i])/qtdDadosPorEquipe[i]
+    inov = float(dfresumo['Inovacao'][i])/qtdDadosPorEquipe[i]
+    nota = pa + cr + co + ap + mvp + inov
+    st.write("Média Total da " + str(rotulo[i]) + " = " + str(nota))
