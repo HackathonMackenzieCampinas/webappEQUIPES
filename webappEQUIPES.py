@@ -895,19 +895,22 @@ elif choice == "EQUIPE 15":
           st.write(df15R['resposta'][j]) 
 elif choice == "Pontos Equipes":
   vetNOTAS = []
-  for i in range(n):
-    pa = float(dfresumo['Participacao'][i])/qtdDadosPorEquipe[i]
-    cr = float(dfresumo['Criatividade'][i])/qtdDadosPorEquipe[i]
-    co = float(dfresumo['Coerencia'][i])/qtdDadosPorEquipe[i]
-    ap = float(dfresumo['Apresentacao'][i])/qtdDadosPorEquipe[i]
-    mvp =  float(dfresumo['MVP'][i])/qtdDadosPorEquipe[i]
-    inov = float(dfresumo['Inovacao'][i])/qtdDadosPorEquipe[i]
-    nota = pa + cr + co + ap + mvp + inov
-    vetNOTAS.append(nota)
-    st.write("Média Total da " + str(rotulo[i]))
-    st.info(nota)
-    st.write('')
-  DF = pd.DataFrame(vetNOTAS)
-  DF.columns = ['Notas']
-  DF.index = rotulo
-  st.dataframe(DF.sort_values(by='Notas', ascending=False))
+  colNotas1, colNotas2 = st.columns((1,1))
+  with colNotas1:
+    for i in range(n):
+      pa = float(dfresumo['Participacao'][i])/qtdDadosPorEquipe[i]
+      cr = float(dfresumo['Criatividade'][i])/qtdDadosPorEquipe[i]
+      co = float(dfresumo['Coerencia'][i])/qtdDadosPorEquipe[i]
+      ap = float(dfresumo['Apresentacao'][i])/qtdDadosPorEquipe[i]
+      mvp =  float(dfresumo['MVP'][i])/qtdDadosPorEquipe[i]
+      inov = float(dfresumo['Inovacao'][i])/qtdDadosPorEquipe[i]
+      nota = pa + cr + co + ap + mvp + inov
+      vetNOTAS.append(nota)
+      st.write("Média Total da " + str(rotulo[i]))
+      st.info(nota)
+      st.write('')
+  with colNotas2:
+    DF = pd.DataFrame(vetNOTAS)
+    DF.columns = ['Notas']
+    DF.index = rotulo
+    st.dataframe(DF.sort_values(by='Notas', ascending=False))
