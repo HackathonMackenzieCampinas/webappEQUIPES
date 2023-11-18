@@ -171,7 +171,7 @@ st.markdown(mystyle1, unsafe_allow_html=True)
 menu = ["Dúvidas",
         "Respostas",
         "Dúvidas e Respostas",
-        "Pontuação Equipes",
+        "Pontos Equipes",
         "EQUIPE 01",
         "EQUIPE 02",
         "EQUIPE 03", 
@@ -891,7 +891,7 @@ elif choice == "EQUIPE 15":
       for j in range(nR):
         with st.chat_message("user", avatar = "👨‍⚖️"):
           st.write(df15R['resposta'][j]) 
-elif choice = "Pontuação Equipes":
+elif choice == "Pontos Equipes":
   for i in range(n):
     pa = float(dfresumo['Participacao'][i])/qtdDadosPorEquipe[i]
     cr = float(dfresumo['Criatividade'][i])/qtdDadosPorEquipe[i]
