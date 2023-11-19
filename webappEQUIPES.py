@@ -912,13 +912,14 @@ elif choice == "Pontos Equipes":
     """
     st.write('')
   with colNotas2:
+    DF = pd.DataFrame(vetNOTAS)
+    DF.columns = ['Notas']
+    DF.index = rotulo
+    st.dataframe(DF.sort_values(by='Notas', ascending=False)) 
+  with colNotas3:
     """
     ## Column 2
     Stuff aligned to the right
     """
     st.button("➡️")
-  with colNotas3:
-    DF = pd.DataFrame(vetNOTAS)
-    DF.columns = ['Notas']
-    DF.index = rotulo
-    st.dataframe(DF.sort_values(by='Notas', ascending=False)) 
+
