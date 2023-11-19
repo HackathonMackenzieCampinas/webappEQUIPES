@@ -7,23 +7,7 @@ import pandas as pd
 import altair as alt
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
-st.set_page_config(layout='wide')
-st.markdown(
-    """
-    <style>
-        div[data-testid="column"]:nth-of-type(1)
-        {
-            border:1px solid red;
-        } 
 
-        div[data-testid="column"]:nth-of-type(2)
-        {
-            border:1px solid blue;
-            text-align: end;
-        } 
-    </style>
-    """,unsafe_allow_html=True
-)
 #from urllib.error import URLError
 #DÚVIDAS
 rD = requests.get('https://docs.google.com/spreadsheets/d/e/2PACX-1vQQNWj747l2uR_TOZ_4cTnajPMmbpLb84ILH1KMzu1eN3BwalrUTuN7XrcWWU6q5qVGnw-Ay4QEG1x_/pub?gid=1381735194&single=true&output=csv')
