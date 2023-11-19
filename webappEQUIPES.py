@@ -912,10 +912,13 @@ elif choice == "Pontos Equipes":
     """
     st.write('')
   with colNotas2:
+    """
+    ## CLASSIFICAÇÃO GERAL
+    """
     DF = pd.DataFrame(vetNOTAS)
     DF.columns = ['Notas']
     DF.index = rotulo
-    st.dataframe(DF.sort_values(by='Notas', ascending=False)) 
+    st.dataframe(DF.sort_values(by='Notas', ascending=False))     
   with colNotas3:
     """
     ## Column 2
