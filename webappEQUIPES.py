@@ -7,8 +7,16 @@ import pandas as pd
 import altair as alt
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
-
 #from urllib.error import URLError
+
+mystyle = '''
+    <style>
+        p {
+            text-align: justify;
+        }
+    </style>
+    '''
+st.markdown(mystyle, unsafe_allow_html=True)
 
 #DÚVIDAS
 rD = requests.get('https://docs.google.com/spreadsheets/d/e/2PACX-1vQQNWj747l2uR_TOZ_4cTnajPMmbpLb84ILH1KMzu1eN3BwalrUTuN7XrcWWU6q5qVGnw-Ay4QEG1x_/pub?gid=1381735194&single=true&output=csv')
@@ -908,6 +916,8 @@ elif choice == "Pontos Equipes":
       vetNOTAS.append(nota)
       st.write("Média Total da " + str(rotulo[i]))
       st.info(nota)
+      SUB_TITULO = '<p style="font-family:tahoma; color:Blue; font-size: 28px;">{nota}</p>'
+      st.markdown(SUB_TITULO, unsafe_allow_html=True)
       st.write('')
   with colNotas2:
     DF = pd.DataFrame(vetNOTAS)
