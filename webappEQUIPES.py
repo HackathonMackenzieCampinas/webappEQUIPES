@@ -895,6 +895,8 @@ elif choice == "Pontos Equipes":
   vetNOTAS = []
   colNotas1,colNotas2, colNotas3 = st.columns((1,1,1))
   with colNotas1:
+    """
+    ## RESUMO DE PONTOS
     for i in range(n):
       pa = float(dfresumo['Participacao'][i])/qtdDadosPorEquipe[i]
       cr = float(dfresumo['Criatividade'][i])/qtdDadosPorEquipe[i]
@@ -907,6 +909,8 @@ elif choice == "Pontos Equipes":
       st.write("Média Total da " + str(rotulo[i]))
       st.success(nota)
       st.write('')
+    """
+    st.write('')
   with colNotas2:
     """
     ## Column 2
