@@ -895,7 +895,7 @@ elif choice == "Pontos Equipes":
   vetNOTAS = []
   colNotas1,colNotas2, colNotas3 = st.columns((1,1,1))
   with colNotas1:
-    st.subheader("RESUMO DE PONTOS")
+    st.markdown("<h1 style='text-align: center; color: blue;'>Resumo dos Pontos</h1>", unsafe_allow_html=True)
     for i in range(n):
       pa = float(dfresumo['Participacao'][i])/qtdDadosPorEquipe[i]
       cr = float(dfresumo['Criatividade'][i])/qtdDadosPorEquipe[i]
@@ -909,9 +909,7 @@ elif choice == "Pontos Equipes":
       st.success(nota)
       st.write('')
   with colNotas2:
-    """
-    ## CLASSIFICAÇÃO GERAL
-    """
+    st.markdown("<h1 style='text-align: center; color: blue;'>Ranking Geral</h1>", unsafe_allow_html=True)
     DF = pd.DataFrame(vetNOTAS)
     DF.columns = ['Notas']
     DF.index = rotulo
