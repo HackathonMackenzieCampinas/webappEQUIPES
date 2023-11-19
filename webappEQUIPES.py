@@ -894,7 +894,7 @@ elif choice == "EQUIPE 15":
           st.write(df15R['resposta'][j]) 
 elif choice == "Pontos Equipes":
   vetNOTAS = []
-  colNotas1, colNotas2 = st.columns((1,1))
+  colNotas1, colNotas2, colNotas2 = st.columns((1,1, 1))
   with colNotas1:
     for i in range(n):
       pa = float(dfresumo['Participacao'][i])/qtdDadosPorEquipe[i]
@@ -906,9 +906,11 @@ elif choice == "Pontos Equipes":
       nota = pa + cr + co + ap + mvp + inov
       vetNOTAS.append(nota)
       LBL = "Média Total da " + str(rotulo[i]
-      st.metric(label = "Nota", value = nota, delta =0)
+      st.info(nota)
       st.write('')
   with colNotas2:
+    st.write('')
+  with colNotas3:
     DF = pd.DataFrame(vetNOTAS)
     DF.columns = ['Notas']
     DF.index = rotulo
