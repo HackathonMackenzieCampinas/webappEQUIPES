@@ -165,8 +165,7 @@ Titulo_Principal = '<p style="font-weight: bolder; color:DarkBlue; font-size: 32
 st.markdown(Titulo_Principal, unsafe_allow_html=True)
 mystyle1 =   '''<style> p{text-align:center;}</style>'''
 st.markdown(mystyle1, unsafe_allow_html=True) 
-
-# st.header("Cabeçalho")
+#st.header("Cabeçalho")
 #st.subheader("Sub Cabeçalho")
 #st.write("Como já deve ter percebido, o método st.write() é usado para escrita de texto e informações gerais!")
 menu = ["Dúvidas",
