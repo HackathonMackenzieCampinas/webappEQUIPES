@@ -913,7 +913,7 @@ elif choice == "Pontos Equipes":
     DF = pd.DataFrame(vetNOTAS)
     DF.columns = ['Nota']
     DF.index = rotulo
-    st.dataframe(DF.sort_values(by='Notas', ascending=False))     
+    st.dataframe(DF.sort_values(by='Nota', ascending=False))     
   with colNotas3:
     st.title(" ")
     st.image(image02, width=150, caption='Classificação Final')
