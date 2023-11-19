@@ -15,7 +15,6 @@ dataD = rD.content
 dfD = pd.read_csv(BytesIO(dataD), index_col=0)
 NregD = len(dfD)
 dfD.columns = ['equipe', 'nome', 'duvida', 'obs']
- ['D/T', 'e-mail', 'Equipe', 'Nome', 'Resposta', 'OBS', 'mail', 'Classificacao' ]
 #============================================================================================
 #IMPORTAÇÃO DOS DADOS DA PLANILHA Pontuação das Equipes II Hackathon Mackenzie-Logithink-IMA (hackathon.cct.2023@gmail.com)
 rP = requests.get('https://docs.google.com/spreadsheets/d/e/2PACX-1vQj4zhEz_COCvFMKnizUaRZz87rl8tOVv3b-U7q9fQFMauMRbT7vJDIlI8HPSLAdoCsthRh6yEigLsX/pub?gid=87278842&single=true&output=csv')
