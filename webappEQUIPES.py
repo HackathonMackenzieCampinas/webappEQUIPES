@@ -7,7 +7,23 @@ import pandas as pd
 import altair as alt
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+st.set_page_config(layout='wide')
+st.markdown(
+    """
+    <style>
+        div[data-testid="column"]:nth-of-type(1)
+        {
+            border:1px solid red;
+        } 
 
+        div[data-testid="column"]:nth-of-type(2)
+        {
+            border:1px solid blue;
+            text-align: end;
+        } 
+    </style>
+    """,unsafe_allow_html=True
+)
 #from urllib.error import URLError
 #DÚVIDAS
 rD = requests.get('https://docs.google.com/spreadsheets/d/e/2PACX-1vQQNWj747l2uR_TOZ_4cTnajPMmbpLb84ILH1KMzu1eN3BwalrUTuN7XrcWWU6q5qVGnw-Ay4QEG1x_/pub?gid=1381735194&single=true&output=csv')
@@ -160,23 +176,6 @@ NregDf15R = len(df15R)
 
 image01 = Image.open('ImagemLateral.jpg')
 st.sidebar.image(image01, width=300, caption='Mack Week CCT 2022') 
-st.set_page_config(layout='wide')
-st.markdown(
-    """
-    <style>
-        div[data-testid="column"]:nth-of-type(1)
-        {
-            border:1px solid red;
-        } 
-
-        div[data-testid="column"]:nth-of-type(2)
-        {
-            border:1px solid blue;
-            text-align: end;
-        } 
-    </style>
-    """,unsafe_allow_html=True
-)
 #st.title("PAINEL - EQUIPES HACKATHON")
 Titulo_Principal = '<p style="font-weight: bolder; color:DarkBlue; font-size: 32px;">2ª EDIÇÃO DO DESAFIO HACKATHON: MACKENZIE CAMPINAS - LOGITHINK.IT - IMA (Edição 2023)</p>'
 st.markdown(Titulo_Principal, unsafe_allow_html=True)
