@@ -906,7 +906,7 @@ elif choice == "Pontos Equipes":
       nota = pa + cr + co + ap + mvp + inov
       vetNOTAS.append(nota)
       st.write("Média Total da " + str(rotulo[i])
-      st.info(nota)
+      st.success(nota)
       st.write('')
   with colNotas2: 
     DF = pd.DataFrame(vetNOTAS)
