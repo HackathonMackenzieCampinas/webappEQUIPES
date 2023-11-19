@@ -160,6 +160,23 @@ NregDf15R = len(df15R)
 
 image01 = Image.open('ImagemLateral.jpg')
 st.sidebar.image(image01, width=300, caption='Mack Week CCT 2022') 
+st.set_page_config(layout='wide')
+st.markdown(
+    """
+    <style>
+        div[data-testid="column"]:nth-of-type(1)
+        {
+            border:1px solid red;
+        } 
+
+        div[data-testid="column"]:nth-of-type(2)
+        {
+            border:1px solid blue;
+            text-align: end;
+        } 
+    </style>
+    """,unsafe_allow_html=True
+)
 #st.title("PAINEL - EQUIPES HACKATHON")
 Titulo_Principal = '<p style="font-weight: bolder; color:DarkBlue; font-size: 32px;">2ª EDIÇÃO DO DESAFIO HACKATHON: MACKENZIE CAMPINAS - LOGITHINK.IT - IMA (Edição 2023)</p>'
 st.markdown(Titulo_Principal, unsafe_allow_html=True)
@@ -909,49 +926,13 @@ elif choice == "Pontos Equipes":
       st.success(nota)
       st.write('')
   with colNotas2:
-    st.title('    ')
-  with colNotas3:
-    DF = pd.DataFrame(vetNOTAS)
-    DF.columns = ['Notas']
-    DF.index = rotulo
-    st.dataframe(DF.sort_values(by='Notas', ascending=False))
-  import streamlit as st
-
-st.set_page_config(layout='wide')
-st.markdown(
-    """
-    <style>
-        div[data-testid="column"]:nth-of-type(1)
-        {
-            border:1px solid red;
-        } 
-
-        div[data-testid="column"]:nth-of-type(2)
-        {
-            border:1px solid blue;
-            text-align: end;
-        } 
-    </style>
-    """,unsafe_allow_html=True
-)
-
-col1, col2, col3 = st.columns(3)
-with col1:
-    """
-    ## Column 1 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-    sed do eiusmod tempor incididunt ut labore et dolore 
-    magna aliqua. Volutpat sed cras ornare arcu dui vivamus.
-    """
-with col2:
     """
     ## Column 2
     Stuff aligned to the right
     """
     st.button("➡️")
-with col3:
-    """
-    ## Column 3
-    This column was untouched by our CSS 
-    """
-    st.button("🐈")
+  with colNotas3:
+    DF = pd.DataFrame(vetNOTAS)
+    DF.columns = ['Notas']
+    DF.index = rotulo
+    st.dataframe(DF.sort_values(by='Notas', ascending=False)) 
