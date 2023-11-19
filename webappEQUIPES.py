@@ -905,7 +905,7 @@ elif choice == "Pontos Equipes":
       inov = float(dfresumo['Inovacao'][i])/qtdDadosPorEquipe[i]
       nota = pa + cr + co + ap + mvp + inov
       vetNOTAS.append(nota)
-      LBL = "Média Total da " + str(rotulo[i]
+      st.write("Média Total da " + str(rotulo[i])
       st.info(nota)
       st.write('')
   with colNotas2:
