@@ -908,7 +908,6 @@ elif choice == "Pontos Equipes":
       vetNOTAS.append(nota)
       st.write("Média Total da " + str(rotulo[i]))
       st.success(nota)
-      st.write('')
   with colNotas2:
     st.markdown("<h1 style='text-align: left; color: blue;'>Ranking Geral</h1>", unsafe_allow_html=True)
     DF = pd.DataFrame(vetNOTAS)
