@@ -905,9 +905,7 @@ elif choice == "Pontos Equipes":
       nota = pa + cr + co + ap + mvp + inov
       vetNOTAS.append(nota)
       st.write("Média Total da " + str(rotulo[i]))
-      st.info(nota)
-      SUB_TITULO = '<p style="font-family:tahoma; color:Blue; font-size: 28px;">nota</p>'
-      st.markdown(SUB_TITULO, unsafe_allow_html=True)
+      st.header(nota)
       st.write('')
   with colNotas2:
     DF = pd.DataFrame(vetNOTAS)
