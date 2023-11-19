@@ -7,7 +7,7 @@ import pandas as pd
 import altair as alt
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
-import plotly.graph_objects as go
+
 #from urllib.error import URLError
 #DÚVIDAS
 rD = requests.get('https://docs.google.com/spreadsheets/d/e/2PACX-1vQQNWj747l2uR_TOZ_4cTnajPMmbpLb84ILH1KMzu1eN3BwalrUTuN7XrcWWU6q5qVGnw-Ay4QEG1x_/pub?gid=1381735194&single=true&output=csv')
@@ -913,9 +913,3 @@ elif choice == "Pontos Equipes":
     DF.columns = ['Notas']
     DF.index = rotulo
     st.dataframe(DF.sort_values(by='Notas', ascending=False))
- fig = go.Figure(go.Indicator(
-    mode = "gauge+number",
-    value = 270,
-    domain = {'x': [0, 1], 'y': [0, 1]},
-    title = {'text': "Speed"}))
-fig.show()
