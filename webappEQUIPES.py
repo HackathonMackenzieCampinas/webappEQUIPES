@@ -159,6 +159,7 @@ NregDf15D = len(df15D)
 NregDf15R = len(df15R)
 
 image01 = Image.open('ImagemLateral.jpg')
+image02 = Image.open('Ranking.jpg')
 st.sidebar.image(image01, width=300, caption='Mack Week CCT 2022') 
 #st.title("PAINEL - EQUIPES HACKATHON")
 Titulo_Principal = '<p style="font-weight: bolder; color:DarkBlue; font-size: 32px;">2ª EDIÇÃO DO DESAFIO HACKATHON: MACKENZIE CAMPINAS - LOGITHINK.IT - IMA (Edição 2023)</p>'
@@ -915,8 +916,4 @@ elif choice == "Pontos Equipes":
     DF.index = rotulo
     st.dataframe(DF.sort_values(by='Notas', ascending=False))     
   with colNotas3:
-    """
-    ## Column 2
-    Stuff aligned to the right
-    """
-    st.button("➡️")
+    st.image(image02, width=150, caption='Classificação Final')
