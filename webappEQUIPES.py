@@ -909,7 +909,7 @@ elif choice == "Pontos Equipes":
       st.success(nota)
       st.write('')
   with colNotas2:
-    st.write('    ')
+    st.title('    ')
   with colNotas3:
     DF = pd.DataFrame(vetNOTAS)
     DF.columns = ['Notas']
