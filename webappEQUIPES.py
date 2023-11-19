@@ -904,7 +904,7 @@ elif choice == "Pontos Equipes":
       ap = float(dfresumo['Apresentacao'][i])/qtdDadosPorEquipe[i]
       mvp =  float(dfresumo['MVP'][i])/qtdDadosPorEquipe[i]
       inov = float(dfresumo['Inovacao'][i])/qtdDadosPorEquipe[i]
-      nota = pa + cr + co + ap + mvp + inov
+      nota = round(pa + cr + co + ap + mvp + inov, 2)
       vetNOTAS.append(nota)
       st.write("Média Total da " + str(rotulo[i]))
       st.success(nota)
