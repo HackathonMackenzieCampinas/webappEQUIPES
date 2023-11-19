@@ -906,7 +906,7 @@ elif choice == "Pontos Equipes":
       nota = pa + cr + co + ap + mvp + inov
       vetNOTAS.append(nota)
       LBL = "Média Total da " + str(rotulo[i]
-      st.metric(label = LBL, value = nota, delta =0)
+      st.metric(label = "Nota", value = nota, delta =0)
       st.write('')
   with colNotas2:
     DF = pd.DataFrame(vetNOTAS)
