@@ -911,7 +911,7 @@ elif choice == "Pontos Equipes":
   with colNotas2:
     st.markdown("<h1 style='text-align: left; color: blue;'>Ranking Geral</h1>", unsafe_allow_html=True)
     DF = pd.DataFrame(vetNOTAS)
-    DF.columns = ['Notas']
+    DF.columns = ['Nota']
     DF.index = rotulo
     st.dataframe(DF.sort_values(by='Notas', ascending=False))     
   with colNotas3:
