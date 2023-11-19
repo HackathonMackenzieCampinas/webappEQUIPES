@@ -918,4 +918,4 @@ elif choice == "Pontos Equipes":
   with colNotas3:
     st.title(" ")
     st.image(image02, width=150, caption='Classificação Final')
-    st.markdown("<h1 style='text-align: left; font-family:calibri; font-size: 14px; color: gray;'>Este painel tem o objetivo de auxiliar a Equipe de Gestão do Hackathon 2023 escolher as 5 equipes finalistas que participarão do Evento Final, disputando uma das três vagas na dinâmica Elevator Pitch</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: left; font-family:arial; font-size: 14px; color: gray;'>Este painel tem o objetivo de auxiliar a Equipe de Gestão do Hackathon 2023 escolher as 5 equipes finalistas que participarão do Evento Final, disputando uma das 3 vagas na dinâmica Elevator Pitch.</h1>", unsafe_allow_html=True)
