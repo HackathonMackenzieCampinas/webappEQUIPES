@@ -894,7 +894,7 @@ elif choice == "EQUIPE 15":
           st.write(df15R['resposta'][j]) 
 elif choice == "Pontos Equipes":
   vetNOTAS = []
-  colNotas1, colNotas2 = st.columns((1,1))
+  colNotas1,colNotas2 = st.columns((1,1))
   with colNotas1:
     for i in range(n):
       pa = float(dfresumo['Participacao'][i])/qtdDadosPorEquipe[i]
