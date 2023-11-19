@@ -905,7 +905,8 @@ elif choice == "Pontos Equipes":
       inov = float(dfresumo['Inovacao'][i])/qtdDadosPorEquipe[i]
       nota = pa + cr + co + ap + mvp + inov
       vetNOTAS.append(nota)
-      st.metric(label = "Média Total da " + str(rotulo[i], value = nota)
+      LBL = "Média Total da " + str(rotulo[i]
+      st.metric(label = LBL, value = nota)
       st.write('')
   with colNotas2:
     DF = pd.DataFrame(vetNOTAS)
